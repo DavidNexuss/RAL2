@@ -1,0 +1,17 @@
+# Specify the output image format
+set terminal pngcairo size 800,600
+set output '50.png'
+
+# Plot settings
+set xlabel "Number of balls (n)"
+set ylabel "Gap"
+set grid
+set title "Single allocation for 50 bins"
+
+set arrow from 50, graph 0 to 50, graph 1 nohead
+
+# Plot the data, highlight the specific x value, and add a vertical line
+plot "50_1_Single.dat" using 1:2 with lines title 'd = 1' , \
+     "50_2_Single.dat" using 1:2 with lines title 'd = 2' , \
+     "50_B_Single.dat" using 1:2 with lines title 'd = 1 + B', \
+     "50_3_Single.dat" using 1:2 with lines title 'd = 3', \

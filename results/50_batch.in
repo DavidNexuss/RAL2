@@ -1,0 +1,14 @@
+set terminal pngcairo size 800,600
+set output '50_batch.png'
+
+set xlabel "Number of balls (n)"
+set ylabel "Gap"
+set grid
+set title "Single allocation for 50 bins batched"
+
+set arrow from 50, graph 0 to 50, graph 1 nohead
+
+plot "50_1_Batch.dat" using 1:2 with lines title 'd = 1' watch x=50, \
+     "50_2_Batch.dat" using 1:2 with lines title 'd = 2' watch x=50, \
+     "50_B_Batch.dat" using 1:2 with lines title 'd = 1 + B' watch x=50, \
+     "50_3_Batch.dat" using 1:2 with lines title 'd = 3' watch x=50, \

@@ -1,0 +1,14 @@
+# Specify the output image format
+set terminal pngcairo size 800,600
+set output '50Partial.png'
+
+# Plot settings
+set xlabel "Number of balls (n)"
+set ylabel "Gap"
+set grid
+
+# Plot the data, highlight the specific x value, and add a vertical line
+plot "50_2_SinglePartial_0.dat" using 1:2 with lines title 'k = 0', \
+     "50_2_SinglePartial_1.dat" using 1:2 with lines title 'k = 1', \
+     "50_2_SinglePartial_2.dat" using 1:2 with lines title 'k = 2', \
+     "50_2_Single.dat" using 1:2 with lines title 'd = 2', \

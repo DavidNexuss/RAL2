@@ -1,0 +1,9 @@
+m = 100
+d = 1
+betaProbability = 0.1
+iterations = 1000
+useSingleAllocation = 1
+useBetaProbability = 1
+k = 0
+outputLoad = 0
+partialInformation = 0
